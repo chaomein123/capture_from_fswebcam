@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 def capture_image():
 	timestamp = time.strftime("%Y%m%d_%H%M%S")
-	image_path = f"/home/orangepi/Desktop/Camera/captured/image_{timestamp}.jpg"
+	image_path = f"/home/orangepi/Desktop/capture_fswebcam/captured/image_{timestamp}.jpg"
 	skip_frames = 20
 	command = f"fswebcam -r 1920x1080 --no-banner -S {skip_frames} {image_path}"
 	subprocess.run(command, shell=True, check=True)
